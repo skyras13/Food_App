@@ -1,0 +1,53 @@
+version: '3'
+services:
+  cheator.backend:
+    build:
+      context: .
+    volumes:
+      - ./backend/index.js:/app/index.js
+      - ./backend/package-lock.json:/app/package-lock.json
+      - ./backend/package.json:/app/package.json
+    env_file:
+      - .env
+    ports:
+      - "9000:80"
+    environment:
+      - SERVER_PORT=80
+
+  cheator.frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    volumes:
+      - ./frontend/public:/app/public
+      - ./frontend/src:/app/src
+      - ./frontend/package-lock.json:/app/package-lock.json
+      - ./frontend/package.json:/app/package.json
+    env_file:
+      - .env
+    ports:
+      - "30000:30000"
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./deploy/nginx/nginx-local.conf:/etc/nginx/conf.d/default.conf
+      - ./deploy/ssl/:/etc/nginx/conf.d/
+    ports:
+      - "80:80"
+      - "443:443"
+
+
+  cheator.db:
+    image: mariadb:10.3
+    volumes:
+      - ./deploy/sql:/docker-entrypoint-initdb.d
+      - cheator-dbdata:/var/lib/mysql
+    environment:
+      - MARIADB_DATABASE=${DB_NAME}
+      - MARIADB_ROOT_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "33066:3306"
+
+volumes:
+  cheator-dbdata:
