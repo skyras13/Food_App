@@ -1,0 +1,19 @@
+{
+    "form.student.setup_step_1":  "Step 1: Content Editor Tools - JavaScript",
+    "form.student.setup_step_1_description": "UDOIT Student View uses your institution's global JavaScript to create a more accessible experience for students who need to view and create alternate versions of files in Canvas.",
+    "form.student.setup_step_1_instruction": "Download files if your institution does not have existing JavaScript files. Otherwise use the combine option to manually merge the content.",
+    "form.student.setup_step_1_location": "Select your server location:",
+    "form.student.setup_step_1_download": "Download JavaScript",
+    "form.student.setup_step_1_view_editor": "</> View/Combine with Existing",
+    "form.student.setup_step_1_hide_editor": "Hide JavaScript Editor",
+    "form.student.setup_step_2": "Step 2: Add Files to Theme Editor",
+    "form.student.setup_step_2_part_1": "Go to your institution's Instructure website, log in, click on Account -> Themes, and then select the theme you want to add.",
+    "form.student.setup_step_2_part_1_alt": "Instructure Theme Select page",
+    "form.student.setup_step_2_part_2": "Select the Desktop JavaScript and add the downloaded JavaScript-code.js file",
+    "form.student.setup_step_2_part_2_alt": "Instructure Upload JavaScript page",
+    "form.student.setup_title": "UDOIT Student View Install",
+    "form.student.setup_title_alt": "UDOIT Logo",
+    "form.student.setup_usa": "USA",
+    "form.student.setup_apac": "APAC",
+    "form.student.setup_label": "Javascript Styles Theme"
+}

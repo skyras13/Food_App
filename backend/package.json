@@ -1,0 +1,18 @@
+{
+    "name": "small-project-example",
+    "version": "1.0.0",
+    "description": "An Express.js application",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.4.0",
+        "express": "^4.18.2",
+        "multer": "^1.4.5-lts.1",
+        "nodemon": "^3.0.1",
+        "openai": "^4.3.1"
+    }
+}
