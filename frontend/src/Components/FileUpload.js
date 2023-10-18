@@ -12,7 +12,7 @@ const FileUpload = () => {
     const onUpload = async () => {
         const formData = new FormData();
         formData.append('uploadedFile', file);
-
+        console.log("hello")
         try {
             const response = await axios.post('/api/upload', formData, {
                 headers: {
